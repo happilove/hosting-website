@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="../Css/package-plan.css">
 </head>
 <body>
+    <div class="backdrop"></div>
     <header class="main-header">
         <!--<h1> Choose your plan</h1>-->
-            <div class="plan__list">
+            <div>
+                <button class="toggle-button">
+                    <span class="toggle-button__bar"></span>
+                    <span class="toggle-button__bar"></span>
+                    <span class="toggle-button__bar"></span>
+                </button>   
             <a href="./pricing-package.html" class="main-header__brand">
             <img src="../image/uhost-icon.png" alt="uHost-your favorite hosting company"> 
             </a>
@@ -22,9 +28,21 @@
         <li class="main-nav__item main-nav__item--cta"> <a href="#">Start Hosting</a></li>
     </ul>
 </nav>
-        </header>
-
-        <main>
+</header>
+<nav class="mobile-nav">
+    <ul class="mobile-nav__items">
+        <li class="mobile-nav__item">
+            <a href="./pricing-package.html"> Packages </a>
+        </li>
+        <li class="mobile-nav__item">
+            <a href="./customers.html">Customers</a>
+        </li>
+        <li class="mobile-nav__item mobile-nav__item--cta">
+            <a href="/">Start Hosting</a>
+        </li>
+    </ul>
+ </nav>   
+<main>
 <section class="package" id="plus">
     <a href="#">
         <h1 class="package__title">Our PLUS Plan</h1>
@@ -59,5 +77,6 @@
                 </ul>
             </nav>
          </footer>  
+         <script src="../Js/shared.js"></script>
 </body>
 </html>
