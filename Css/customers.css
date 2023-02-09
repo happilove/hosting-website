@@ -10,9 +10,17 @@
     margin:0;
     padding: 0;
     background-color: rgb(219, 235, 232);
+    
+    /*display:grid; 
+    grid-template-rows: auto 8rem;
+    grid-template-areas:"header"
+                        "main"
+                        "footer";*/
   }
+
   main{
-    padding-top:2.5re;
+    padding-top:3.5rem;
+
   }
 
   .main-header{
@@ -48,6 +56,16 @@
         width:calc(100% - 122px);
         vertical-align: middle;
         }
+
+   /*@media (min-width:40rem) {
+      .toggle-button {
+        display:none;
+      }
+
+      .main-nav {
+        display: flex;
+      }
+    } */
         
         .main-nav__item{
             display: inline-block;
@@ -189,16 +207,18 @@
     }
   
     .testimonial__image-container {
-      width: 65%;
+      width:65%;
       max-width:40rem;
       padding: 20px;
       box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.5);
-      
+      transform: skew(20deg);
+      overflow:hidden;
     }
   
     .testimonial__image {
       width: 100%;
       vertical-align: top;
+      transform:skew(-20deg) scaleX(1.4);
     }
   
     .testimonial__info {
@@ -241,10 +261,13 @@
     .testimonial__text {
       margin: 3px;
     }
+
     .main-footer{
       background-color: rgb(185, 169, 185);
       padding:30px;
       margin-top:48px;
+      /*grid-row: 3/3;*/
+      grid-area: footer;
   }
 
   .main-footer__links{
@@ -252,11 +275,14 @@
       margin:0;
       padding:0;
       text-align: center;
+      display: flex;
+      flex-direction:column;
+      align-items: center;
   }
 
   .main-footer__link{
-      display:inline-block;
-      margin:0 16px;   
+      margin:0 16px; 
+      
   }
 
   .main-footer__link a{
@@ -264,6 +290,7 @@
       text-decoration: none;
       font-weight:bold;
       font-size: 20px;
+    
   }
 
   .main-footer__link a:hover,
@@ -271,7 +298,7 @@
       color: grey;
   }
 
-   .open{
+  .open{
     display:block !important;
   }
   
@@ -279,6 +306,9 @@
     .testimonial {
        margin: 48px auto ;
        max-width: 1500px; 
+       display: flex;
+       align-content:center;
+       justify-content:space-around;
     }
 
     .testimonial__image-container {
@@ -294,7 +324,6 @@
     }
   } 
   
-  
  /* @media (max-width: 530px) {
     body{
       background-color: red;
@@ -307,4 +336,15 @@
     font-size: 15px;
     }
   }
+  @media (min-width:40rem){
+    .main-footer__link{
+     margin:0 1rem;
+    }
+  
+    .main-footer__links{
+     flex-direction:row;
+     justify-content: center; 
+  }
+   }
+   
   
